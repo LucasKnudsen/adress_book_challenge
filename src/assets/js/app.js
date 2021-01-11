@@ -28,7 +28,20 @@ const  renderContacts = () => {
 document.addEventListener('DOMContentLoaded', () => {
 	renderContacts()
 	const  contactForm = document.getElementById('new-contact-form')
-	contactForm.addEventListener('submit', event  => {
+    const  toggleFormVisibilityButton = document.getElementById('add-contact')
+	contactForm.style.display = 'none'
+ 
+	toggleFormVisibilityButton.addEventListener('click', () => {
+		if (contactForm.style.display === '') {
+            contactForm.style.display = 'none'
+            toggleFormVisibilityButton.innerHTML = "Show form"
+		} else {
+            contactForm.style.display = ''
+            toggleFormVisibilityButton.innerHTML = "Hide form"
+		}
+	})
+    
+    contactForm.addEventListener('submit', event  => {
 		event.preventDefault()
 
 		// 1. Read all the input fields and get their values

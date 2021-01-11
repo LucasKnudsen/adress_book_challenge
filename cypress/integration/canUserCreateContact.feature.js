@@ -1,5 +1,5 @@
 describe('user can create a contact', () => {
-	it('test', () => {
+	beforeEach('test', () => {
         cy.visit('index.html'),
         cy.get('#add-contact').click(),
         cy.get('#name').type('Thomas'),
@@ -8,7 +8,7 @@ describe('user can create a contact', () => {
 		cy.get('#company').type('Craft Academy'),
 		cy.get('#notes').type('Awesome coder'),
         cy.get('#twitter').type('@thomasochman'),
-        cy.get('submit').click()
+        cy.get('#submit').click()
     })
     
     it('displays a name of the new contact', () => {
