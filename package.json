@@ -12,7 +12,7 @@
     "superstatic": "^7.1.0"
   },
   "scripts": {
-    "start": "superstatic --port 3003",
+    "start": "superstatic src --port 3003",
     "start:hot": "node server.js",
     "cy:open": "yarn start & cypress open",
     "cyp": "cypress open"
