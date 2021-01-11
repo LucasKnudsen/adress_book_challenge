@@ -12,6 +12,7 @@
   },
   "scripts":{
     "start": "superstatic --port 3003",
-    "cy:open": "yarn start & cypress open"
+    "cy:open": "yarn start & cypress open",
+    "cyp": "cypress open"
   }
 }
